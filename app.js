@@ -1,30 +1,30 @@
 const express = require('express')
 // const path = require('path')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const cors = require('cors')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 require("dotenv").config()
 // Connecting with mongo db
 
-const connectDb = () => {
-    mongoose
-        .connect(process.env.MONGO_URI)
-        .then((x) => {
-            console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-        })
-        .catch((err) => {
-            console.error('Error connecting to mongo', err.reason)
-        })
-}
+// const connectDb = () => {
+//     mongoose
+//         .connect(process.env.MONGO_URI)
+//         .then((x) => {
+//             console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+//         })
+//         .catch((err) => {
+//             console.error('Error connecting to mongo', err.reason)
+//         })
+// }
 // Setting up port with express js
-const employeeRoute = require('./routes/employee.route')
+// const employeeRoute = require('./routes/employee.route')
 const app = express()
-app.use(bodyParser.json())
-app.use(
-    bodyParser.urlencoded({
-        extended: false,
-    }),
-)
+// app.use(bodyParser.json())
+// app.use(
+//     bodyParser.urlencoded({
+//         extended: false,
+//     }),
+// )
 app.use(cors())
 // app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
 // app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
