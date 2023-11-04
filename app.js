@@ -10,10 +10,10 @@ const connectDb = () => {
     mongoose
         .connect(process.env.MONGO_URI)
         .then((x) => {
-            console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+            console.log(`Connected to Mongo! Database`)
         })
         .catch((err) => {
-            console.error('Error connecting to mongo', err.reason)
+            console.error('Error connecting to mongo')
         })
 }
 // Setting up port with express js
