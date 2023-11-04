@@ -33,7 +33,7 @@ const port = process.env.PORT || 4000
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
-connectDb()
+// connectDb()
 
 app.get("/", (req, res) => {
     res.send("Test success")
