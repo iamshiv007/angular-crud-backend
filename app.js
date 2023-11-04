@@ -28,13 +28,13 @@ app.use(
 app.use(cors())
 // app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
 // app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
-app.use('/api', employeeRoute)
+// app.use('/api', employeeRoute)
 // Create port
 const port = process.env.PORT || 4000
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
-connectDb()
+// connectDb()
 
 app.get("/", (req, res) => {
     res.send("Test success")
