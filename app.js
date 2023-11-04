@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 require("dotenv").config()
-
+console.log(process.env.MONGO_URI)
 // Connecting with mongo db
 const connectDb = async () => {
     try {
