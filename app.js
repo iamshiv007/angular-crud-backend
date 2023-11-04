@@ -1,21 +1,21 @@
 const express = require('express')
 // const path = require('path')
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const cors = require('cors')
 // const bodyParser = require('body-parser')
 require("dotenv").config()
 // Connecting with mongo db
 
-// const connectDb = () => {
-//     mongoose
-//         .connect(process.env.MONGO_URI)
-//         .then((x) => {
-//             console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-//         })
-//         .catch((err) => {
-//             console.error('Error connecting to mongo', err.reason)
-//         })
-// }
+const connectDb = () => {
+    mongoose
+        .connect(process.env.MONGO_URI)
+        .then((x) => {
+            console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+        })
+        .catch((err) => {
+            console.error('Error connecting to mongo', err.reason)
+        })
+}
 // Setting up port with express js
 // const employeeRoute = require('./routes/employee.route')
 const app = express()
@@ -34,7 +34,7 @@ const port = process.env.PORT || 4000
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
-// connectDb()
+connectDb()
 
 app.get("/", (req, res) => {
     res.send("Test success")
