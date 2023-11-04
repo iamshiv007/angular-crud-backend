@@ -15,6 +15,6 @@ let Employee = new Schema({
       type: Number
    }
 }, {
-   collection: 'employees'
+   timestamps: true
 })
 module.exports = mongoose.model('Employee', Employee)

@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const employeeRoute = express.Router();
 // Employee model
 let Employee = require('../models/Employee');
